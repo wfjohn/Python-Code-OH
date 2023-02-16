@@ -56,12 +56,12 @@ print("Even or Odd Output While Loop")
 EvenOrOddWhileLoop(12)
 
 # 5. This function should take list of numbers and return the largest in the list. You are not allowed to use internal functions for maximum of lists. Only comparators >, < etc.
-def Biggest(numbers):
+def Biggest(num):
 
   # your code
   outloop = 0
 
-  for n in numbers:
+  for n in num:
     if n > outloop:
         outloop = n
 

@@ -1,18 +1,24 @@
+import random
+
 #Find random num between 1 and six using random
 #Do it 10 times
 #Count how many times a number was rolled
 
-import random
-num = (1, 2, 3, 4, 5, 6)
-x = range(1, 11)
-for n in x:
-    print (random.choice(num))
+DICE_ROLLS_REQUIRED = 10
+total = [0, 0, 0, 0, 0, 0]
+i = 0
+while i < DICE_ROLLS_REQUIRED:
+    i += 1
+    roll = (random.randrange(1, 7))
+    total[roll-1] += 1
 
+i = -1
+while i < len(total) - 1:
+    i += 1
+    if total[i] == 1:
+        amount = "time"
+    else:
+        amount = "times"
+    results = "Dice rolled {}, {} {}".format(i + 1, total[i], amount)
+    print(results)
 
-
-
-# i = 0
-# while i < 10:
-#     i += 1
-
-#     print('Hi')

@@ -23,7 +23,7 @@ ship_location = "Ship Located at {}, {}".format(ship_row + 1, ship_col + 1)
 print(ship_location)
 
 for turn in range(4):
-  #print("x")
+  print("Turn", turn + 1, "out of 4")
   guess_row = int(input("Guess Row: ")) - 1
   guess_col = int(input("Guess Col: ")) - 1
 
@@ -43,5 +43,5 @@ for turn in range(4):
       if turn == 3:
         print("Game Over")
         break
-    print(turn + 1)
+
     print_board(board)

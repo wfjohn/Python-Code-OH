@@ -7,7 +7,7 @@ for x in range(5):
 
 def print_board(board):
   for row in board:
-    print " ".join(row)
+    print(" ".join(row))
 
 print_board(board)
 
@@ -19,16 +19,15 @@ def random_col(board):
 
 ship_row = random_row(board)
 ship_col = random_col(board)
-print ship_row
-print ship_col
-
-# Everything from here on should go in your for loop!
-# Be sure to indent four spaces!
+ship_location = "Ship Located at {}, {}".format(ship_row + 1, ship_col + 1)
+print(ship_location)
 
 for turn in range(4):
+  #print("x")
+  guess_row = int(input("Guess Row: ")) - 1
+  guess_col = int(input("Guess Col: ")) - 1
 
-  guess_row = int(raw_input("Guess Row: "))
-  guess_col = int(raw_input("Guess Col: "))
+ 
 
   if guess_row == ship_row and guess_col == ship_col:
     print("Congratulations! You sunk my battleship!")
@@ -43,6 +42,6 @@ for turn in range(4):
       board[guess_row][guess_col] = "X"
       if turn == 3:
         print("Game Over")
-    # Print (turn + 1) here!
+        break
     print(turn + 1)
     print_board(board)
